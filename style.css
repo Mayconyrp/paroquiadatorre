@@ -1,0 +1,175 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 100%;
+    height: 500px;
+/* border-bottom: 15px solid rgb(35, 160, 35);*/
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB,#E0F6FF)
+}
+.score {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  font-size: x-large;
+}
+.vendas{
+margin-left:1400px;
+margin-bottom: 10px;
+margin-top:-40px;
+position: absolute;
+}
+.pipe{
+    position: absolute;
+    bottom:-27px;
+    width: 80px;
+    /*right: -80px;*/
+    animation: pipe-animation 1.5s infinite linear;
+}
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+    padding-bottom:34px ;
+}
+.jump{
+    animation: jump 500ms  ease-out;
+}
+.clouds{
+    position: absolute;
+    width: 550px;
+    animation:  clouds-animation 20s infinite linear;
+}
+.gameover{
+    width: 300px;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 550px;
+    position: absolute; 
+    display: none;
+}
+.mariogif{
+    width: 300px;
+    height: 300px;
+}
+.botao{
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+
+
+@keyframes pipe-animation{
+    from{
+        right: 0;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0%{
+        bottom: 0;
+    } 
+    40%{
+        bottom: 180px; 
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+    
+} 
+@keyframes clouds-animation {
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+
+    
+}
+
+
+/*Piso*/
+.floor {
+    width: 1500px;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 34px;
+   
+}
+.floor-1{
+position: absolute;  
+z-index: 0;
+}
+
+.floor-animation-1{
+animation: floor-animation-1 3.1s infinite linear;
+}
+
+@keyframes floor-animation-1 {
+0%{
+    right:0px;
+}
+100%{
+    right: 100%;    
+}
+}
+
+
+
+
+.floor-2{
+position: absolute; 
+right: -1500px;
+z-index: 10;
+}
+
+.floor-animation-2{
+animation: floor-animation-2 6.2s infinite linear;
+}
+
+@keyframes floor-animation-2 {
+0%{
+    right:-1500px;
+}
+100%{
+    right: 100%;    
+}
+}
+
+
+
+
+.floor-3{
+position: absolute;  
+right: -1500px;
+z-index: 10;
+}
+
+.floor-animation-3{
+animation: floor-animation-3 6.2s infinite linear;
+}
+
+@keyframes floor-animation-3 {
+0%{
+    right:-1500px;
+}
+100%{
+    right: 100%;    
+}
+}
+
