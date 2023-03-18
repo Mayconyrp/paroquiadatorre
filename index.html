@@ -15,11 +15,12 @@
         <p class="vendas">score de vendas: 0/200</p>
         <div class="gameover" id="gameover">
             <img src="img/game-over-fim.PNG" alt="" class="mariogif">
+
             <button  id="reset" class="botao" onclick="window.location.reload()">Tentar Novamente</button>
         </div>
         <img src="img/clouds.png" alt="" class="clouds">
         <img src="./img/pipe.png" alt="" class="pipe">
-        <img src="img/mario.png" alt="" class="mario">
+        <img src="img/mario.png" alt="" id ="mario" class="mario">
 
         <div class="floor">
             <img src="./img/floor.png" class="floor-1" h>
@@ -28,6 +29,26 @@
         </div>
 
     </div>
+
+    <button onclick="trocar()">Pe Jurandir</button>
+    <button onclick="trocar2()">Pe Romeu</button>
+    <button onclick="trocar3()">Pe Romeu pixelado</button>
+
+    <script>
+    function trocar(){    
+        document.getElementById("mario").src = "./img/mariojurandir.png"
+        }
+        function trocar2(){    
+            document.getElementById("mario").src = "./img/mario.png"
+        }    
+        function trocar(){    
+        document.getElementById("mario").src = "./img/mariojurandir.png"
+        }
+        function trocar3(){    
+            document.getElementById("mario").src = "./img/peromeupixelado.png"
+        }    
+
+    </script>
 <!--<div class="gameover">
         <h1>game over</h1>
         <button  id="reset" class="botao" onclick="window.location.reload()">Atualizar</button>

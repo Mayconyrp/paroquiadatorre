@@ -1,6 +1,7 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const elemento = document.getElementById("pipe");
+const pause = document.querySelector('.pause');
 
 floor1 = document.querySelector('.floor-1')
 floor2 = document.querySelector('.floor-2')
@@ -12,7 +13,14 @@ let alreadyJump = false;
 let count = 0;
 
 var gameover = document.getElementById("gameover");
-
+/*
+function trocar(){    
+    document.getElementById("mario").src = "./img/mariojurandir.png"
+    }
+    function trocar2(){    
+        document.getElementById("mario").src = "./img/mario.png"
+    }    
+    */
 audioStart.play();
 
 function floorAnimation1(){
@@ -55,7 +63,13 @@ const loop = setInterval(() => {
         mario.style.animation = 'none';
         mario.style.bottom = `${marioPosition}px`;
 
-        mario.src = './img/game-over.png'
+        if (trocar()===true){
+            mario.src = './img/mariojurandir.png'
+
+        }else{
+            mario.src = './img/game-over.png'
+
+        }
         mario.style.width = '150px'
         
 /* mario.style.width = '75px'
@@ -91,10 +105,19 @@ mario.style.left = '50px'
     }
     count++;
     score.innerHTML = `SCORE: ${count}`;
-/*
-    if (count == 100)
+  /*  if (count == 700)
     {
-        pipe.style.animation = 'pipe-animation 1.1s infinite linear';
+
+    }
+    while (count == 800)
+    {
+        pipe.style.animation = 'pipe-animation 1.2s infinite ';
+    }
+*/
+/*
+    if (count == 1000)
+    {
+        pipe.style.animation = 'pipe-animation 1.5s infinite linear';
     }
     
     if (count == 200)
