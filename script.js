@@ -56,9 +56,11 @@ const loop = setInterval(() => {
         mario.style.bottom = `${marioPosition}px`;
 
         mario.src = './img/game-over.png'
-        mario.style.width = '75px'
-        mario.style.left = '50px'
-
+        mario.style.width = '150px'
+        
+/* mario.style.width = '75px'
+mario.style.left = '50px'
+*/
 
             floor1.style.animation = 'none';
             floor1.style.left = `${floorPosition1}px`;
@@ -89,7 +91,7 @@ const loop = setInterval(() => {
     }
     count++;
     score.innerHTML = `SCORE: ${count}`;
-
+/*
     if (count == 100)
     {
         pipe.style.animation = 'pipe-animation 1.1s infinite linear';
@@ -109,8 +111,9 @@ const loop = setInterval(() => {
     {
         pipe.style.animation = 'pipe-animation 0.5 infinite linear';
     }
-
+*/
 
 }, 10)
 
 document.addEventListener('keydown', jump);
+document.addEventListener('touch', jump);
